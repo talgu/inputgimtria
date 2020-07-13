@@ -15,14 +15,15 @@ import {
 
 
 class App extends React.Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = { username: '' };
     this.handleClick = this.handleClick.bind(this);
   }
+  
   myChangeHandler = (event) => {
     this.setState({username: event.target.value});
-}
+  }
 
   handleClick() {
     var converter = require('number-to-words');
