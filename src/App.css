@@ -1,0 +1,36 @@
+.input-group {
+    width: 80% !important;
+    margin-left: 10% !important;
+}
+h1 
+{
+  margin-left: 35%;
+  height: 9%;
+  padding: 10px;
+  font-weight: 800 !important;
+  font-size: 171px !important;
+  letter-spacing: 85px;
+  text-shadow: 4px 4px #BFDEFF;
+}
+p {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 160px;
+    margin-top: 4% !important;
+    font-weight: 800;
+    text-shadow: 4px 4px #BFDEFF;
+  }
+  #h1s
+  {
+    text-shadow: 4px 4px #ff0c0c87;
+  }
+  #is:hover{
+    border:4px solid #ff0c0c87;
+  }
+    #is:active{
+    border:4px solid #ff0c0c87;
+  }
+    .sp
+  {
+    text-shadow: 4px 4px #ff0c0c87;
+  }
