@@ -16,17 +16,17 @@ import {
 class Ntw extends React.Component {
     constructor(props) {
     super(props);
-    this.state = { username: '' };
+    this.state = { number: '' };
     this.handleClick = this.handleClick.bind(this);
   }
   myChangeHandler = (event) => {
-    this.setState({username: event.target.value});
+    this.setState({number: event.target.value});
 }
 
   handleClick() {
     var converter = require('number-to-words');
-    var test = this.state.username;
-    document.getElementById("demo").innerHTML = wordsToNumbers(test);
+    var convernumber = this.state.number;
+    document.getElementById("cn").innerHTML = wordsToNumbers(convernumber);
   }
 
   render() {
@@ -37,7 +37,7 @@ class Ntw extends React.Component {
   <InputGroup id="is">
     <FormControl
       placeholder="translate word to number"
-      aria-label="Recipient's username"
+      aria-label="Recipient's number"
       aria-describedby="basic-addon2"
       onChange={this.myChangeHandler}
     />
@@ -52,7 +52,7 @@ class Ntw extends React.Component {
       <Dropdown.Item href="/">number to word</Dropdown.Item>
     </DropdownButton>
   </InputGroup>
-  <p id="demo" class="sp">{this.state.username}</p>
+  <p id="cn" class="sp">{this.state.number}</p>
     </div>
       </div>
     )
