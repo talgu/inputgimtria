@@ -17,18 +17,18 @@ import {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: '' };
+    this.state = { word: '' };
     this.handleClick = this.handleClick.bind(this);
   }
 
   myChangeHandler = (event) => {
-    this.setState({username: event.target.value});
+    this.setState({word: event.target.value});
   }
 
   handleClick() {
     var converter = require('number-to-words');
-    var test = this.state.username;
-    document.getElementById("demo").innerHTML = converter.toWords(test);
+    var converword = this.state.word;
+    document.getElementById("cw").innerHTML = converter.toWords(converword);
   }
 
   render() {
@@ -39,10 +39,10 @@ class App extends React.Component {
       <InputGroup>
               <FormControl
                 placeholder="translate number to word"
-                aria-label="Recipient's username"
+                aria-label="Recipient's word"
                 aria-describedby="basic-addon2"
                 onChange={this.myChangeHandler}
-                input value={this.state.username} onChange={event => this.setState({username: event.target.value.replace(/\D/,'')})}
+                input value={this.state.word} onChange={event => this.setState({word: event.target.value.replace(/\D/,'')})}
             />
         <DropdownButton
         as={InputGroup.Append}
@@ -55,7 +55,7 @@ class App extends React.Component {
       <Dropdown.Item href="/Ntw">word to number</Dropdown.Item>
     </DropdownButton>
   </InputGroup>
-    <p id="demo">{this.state.username}</p>
+    <p id="cw">{this.state.word}</p>
   </div>
   </div>
     )
