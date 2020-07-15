@@ -20,7 +20,7 @@ class App extends React.Component {
     this.state = { username: '' };
     this.handleClick = this.handleClick.bind(this);
   }
-  
+
   myChangeHandler = (event) => {
     this.setState({username: event.target.value});
   }
@@ -33,31 +33,31 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+    <div>
     <div className="App">
     <h1>NTW</h1>
-  <InputGroup>
-    <FormControl
-      placeholder="translate number to word"
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-      onChange={this.myChangeHandler}
-      input value={this.state.username} onChange={event => this.setState({username: event.target.value.replace(/\D/,'')})}
-    />
-    <DropdownButton
-      as={InputGroup.Append}
-      variant="outline-secondary"
-      title="Dropdown"
-      id="input-group-dropdown-2"
-    >
-      <Dropdown.Item href="#"  onClick={this.handleClick}>Action</Dropdown.Item>
+      <InputGroup>
+              <FormControl
+                placeholder="translate number to word"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                onChange={this.myChangeHandler}
+                input value={this.state.username} onChange={event => this.setState({username: event.target.value.replace(/\D/,'')})}
+            />
+        <DropdownButton
+        as={InputGroup.Append}
+        variant="outline-secondary"
+        title="Dropdown"
+        id="input-group-dropdown-2"
+        >
+      <Dropdown.Item href="#" onClick={this.handleClick}>Action</Dropdown.Item>
       <Dropdown.Divider />
       <Dropdown.Item href="/Ntw">word to number</Dropdown.Item>
     </DropdownButton>
   </InputGroup>
-  <p id="demo">{this.state.username}</p>
-    </div>
-      </div>
+    <p id="demo">{this.state.username}</p>
+  </div>
+  </div>
     )
   }
 }
