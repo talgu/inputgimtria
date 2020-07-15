@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Contact from './contact';
+import Ntw from './Ntw';
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router,
@@ -15,7 +15,7 @@ const routing = (
   <Router>
     <div>
       <Route exact path="/" component={App} />
-      <Route path="/Ntw" component={Contact} />
+      <Route path="/Ntw" component={Ntw} />
     </div>
   </Router>
 )
